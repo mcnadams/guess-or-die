@@ -10,13 +10,17 @@ const gallows = document.getElementById('gallows');
 
 let wrongGuessCount = 0;
 const maxWrongGuesses = 5;
-
 const words = [
     'gallows',
     'alchemy',
     'weekend',
     'caffeine'
 ];
+
+let rand = Math.random() * words.length;
+rand = Math.floor(rand);
+console.log(rand);
+
 
 const imgSrc = [
     '../assets/hanging-body1.jpg',
@@ -30,7 +34,8 @@ const imgSrc = [
 let correctGuesses = [];
 let correctGuessCount = 0;
 
-const secretWord = words[0];
+const secretWord = words[rand];
+console.log(secretWord);
 let spacesRemaining = 0;
 
 makeSecretWord();
