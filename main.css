@@ -27,8 +27,12 @@ footer {
 }
 
 #secret-word{
-    padding: 20px 5px;
     display: block;
     margin: 5px;
     font-size: 30px;
 }
+
+#guess-form {
+    margin: 25px;
+}
+
