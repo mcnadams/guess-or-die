@@ -25,3 +25,10 @@ footer {
     display: inline-block;
     margin: 30px;
 }
+
+#secret-word{
+    padding: 20px 5px;
+    display: block;
+    margin: 5px;
+    font-size: 30px;
+}
