@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+}
+
+header {
+    background: lightblue;
+    padding: 30px;
+}
+
+main {
+    padding: 50px;
+}
+
+footer {
+    background: rgb(199, 198, 198);
+    padding: 20px;
+}
+
+#gallows {
+    height: 250px;
+    width: 350px;
+    background-image: url('./assets/gallows.jpg');
+    background-size: 350px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 30px;
+}

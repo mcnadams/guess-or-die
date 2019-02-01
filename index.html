@@ -8,6 +8,36 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <header>
+        <h1>Guess or Die</h1>
+    </header>
+
+    <main>
+        <section>
+            <span id="gallows"></span>
+        </section>
+
+        <section>
+            <span id="word"></span>
+        </section>
+
+        <section>
+            <form id="guess-form">
+                <label for="guess">Guess a letter</label>
+                <input type="text" id="guess">
+                <input type="button" value="guess">
+            </form>
+        </section>
+
+        <section>
+            <p>Letters Guessed</p>
+            <p id="letters-guessed"></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Bonnie McNeil in association with Paleopuff mob, ACL 2019
+    </footer>
     
     <script type="module" src="./src/main.js"></script>
 </body>
