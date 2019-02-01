@@ -14,7 +14,10 @@ const words = [
     'gallows',
     'alchemy',
     'weekend',
-    'caffeine'
+    'caffeine',
+    'programming',
+    'javascript',
+    'unicorn'
 ];
 
 let rand = Math.random() * words.length;
@@ -90,6 +93,7 @@ guessForm.addEventListener('submit', function(event) {
             loseMessage.classList.add('lose');
             loseMessage.textContent = 'Sorry, you\'re out of chances. See you in hell.';
             announceResult.appendChild(loseMessage);
+            secretWordNode.textContent = secretWord;
         }
     }
 });
