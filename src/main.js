@@ -6,6 +6,7 @@ const wrongGuessed = document.getElementById('wrong');
 const secretWordNode = document.getElementById('secret-word');
 const announceResult = document.getElementById('announce-result');
 const guessNode = document.getElementById('guess');
+const gallows = document.getElementById('gallows');
 
 let wrongGuessCount = 0;
 const maxWrongGuesses = 5;
@@ -50,6 +51,9 @@ function makeSecretWord() {
 guessForm.addEventListener('submit', function(event) {
     event.preventDefault();
     const guess = guessNode.value[0];
+    if(guess === undefined) {
+        return;
+    }
     guessNode.value = '';
 
     let result = checkGuess(guess, secretWord);
@@ -63,6 +67,9 @@ guessForm.addEventListener('submit', function(event) {
     else {
         wrongGuessed.textContent += guess;
         wrongGuessCount++;
+        const newBodyPart = document.createElement('span');
+        newBodyPart.classList.add('body-part');
+        gallows.appendChild(newBodyPart);
         if(wrongGuessCount > maxWrongGuesses) {
             guessForm.classList.add('hidden');
             const loseMessage = document.createElement('h2');
