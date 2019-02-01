@@ -1,7 +1,6 @@
 import { checkGuess, countLetter } from '../src/word-game.js';
 
 const guessForm = document.getElementById('guess-form');
-const guessButton = document.getElementById('guess-button');
 const rightGuessed = document.getElementById('right');
 const wrongGuessed = document.getElementById('wrong');
 const secretWordNode = document.getElementById('secret-word');
@@ -12,33 +11,32 @@ const words = [
     'weekend',
     'caffeine'
 ];
-console.log(words.length);
-console.log(words[1][1]);
+// console.log(words.length);
+// console.log(words[1][1]);
 
-const secretWord = words[1];
+const secretWord = words[0];
 
 //put blank spaces in word section for secret word
 for(let i = 0; i < secretWord.length; i++) {
     secretWordNode.textContent += '__ ';
 }
 
-
-guessButton.addEventListener('click', function(event) {
+guessForm.addEventListener('submit', function(event) {
     event.preventDefault();
     const guess = document.getElementById('guess').value[0];
-    console.log(guess);
 
     let result = checkGuess(guess, secretWord);
-    console.log(result);
+    let instances = 0;
  
     if(result){
         rightGuessed.textContent += guess;
+        instances = countLetter(guess, secretWord);
+        console.log('instances', instances);
     }
     else {
         wrongGuessed.textContent += guess;
     }
 });
-
  
 
 
