@@ -1,4 +1,4 @@
-import { checkGuess, countLetter } from '../src/word-game.js';
+import { checkGuess } from '../src/word-game.js';
 
 const guessForm = document.getElementById('guess-form');
 const rightGuessed = document.getElementById('right');
@@ -22,8 +22,6 @@ const words = [
 
 let rand = Math.random() * words.length;
 rand = Math.floor(rand);
-console.log(rand);
-
 
 const imgSrc = [
     '../assets/hanging-body1.jpg',
@@ -97,11 +95,3 @@ guessForm.addEventListener('submit', function(event) {
         }
     }
 });
-
-
-
-
-
-//choose a random word from words array
-
-//if the same letter is guessed twice, don't add it to the letters guessed again
