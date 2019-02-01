@@ -5,6 +5,7 @@ body {
 header {
     background: lightblue;
     padding: 30px;
+    margin-bottom: -45px;
 }
 
 main {
@@ -36,3 +37,16 @@ footer {
     margin: 25px;
 }
 
+.win {
+    background: green;
+    padding: 10px;
+}
+
+.lose {
+    background: red;
+    padding: 10px;
+}
+
+.hidden{
+    visibility: hidden;
+}
