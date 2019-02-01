@@ -53,10 +53,7 @@ footer {
 }
 
 .body-part {
-    height: 30px;
-    width: 30px;
-    border-radius: 150px;
+    width: 70px;
     display: block;
-    background: red;
     margin: auto;
 }

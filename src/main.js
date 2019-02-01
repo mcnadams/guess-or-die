@@ -18,6 +18,15 @@ const words = [
     'caffeine'
 ];
 
+const imgSrc = [
+    '../assets/hanging-body1.jpg',
+    '../assets/hanging-body2.jpg',
+    '../assets/hanging-body3.jpg',
+    '../assets/hanging-body4.jpg',
+    '../assets/hanging-body5.jpg',
+    '../assets/hanging-body6.jpg'
+];
+
 let correctGuesses = [];
 let correctGuessCount = 0;
 
@@ -46,7 +55,6 @@ function makeSecretWord() {
         announceResult.appendChild(winMessage);
     }
 }
-//put blank spaces in word section for secret word
 
 guessForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -66,9 +74,10 @@ guessForm.addEventListener('submit', function(event) {
     }
     else {
         wrongGuessed.textContent += guess;
-        wrongGuessCount++;
-        const newBodyPart = document.createElement('span');
+        const newBodyPart = document.createElement('img');
+        newBodyPart.src = imgSrc[wrongGuessCount];
         newBodyPart.classList.add('body-part');
+        wrongGuessCount++;
         gallows.appendChild(newBodyPart);
         if(wrongGuessCount > maxWrongGuesses) {
             guessForm.classList.add('hidden');
@@ -83,7 +92,6 @@ guessForm.addEventListener('submit', function(event) {
 
 
 
-//add a part to the gallows if a wrong letter is guessed
 
 //choose a random word from words array
 
