@@ -10,6 +10,7 @@ const gallows = document.getElementById('gallows');
 
 let wrongGuessCount = 0;
 const maxWrongGuesses = 5;
+
 const words = [
     'gallows',
     'alchemy',
@@ -17,7 +18,11 @@ const words = [
     'caffeine',
     'programming',
     'javascript',
-    'unicorn'
+    'unicorn',
+    'mobster',
+    'headache',
+    'interview',
+    'developer'
 ];
 
 let rand = Math.random() * words.length;
@@ -50,7 +55,7 @@ function makeSecretWord() {
             secretWordNode.textContent += secretLetter;
         }
         else {
-            secretWordNode.textContent += ' __ ';
+            secretWordNode.textContent += ' _ ';
             spacesRemaining++;
         }     
     }
@@ -75,7 +80,6 @@ guessForm.addEventListener('submit', function(event) {
     if(result){
         correctGuesses[correctGuessCount] = guess;
         correctGuessCount++;
-        rightGuessed.textContent += guess;
         makeSecretWord();
     }
     else {

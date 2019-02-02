@@ -56,3 +56,11 @@ footer {
     display: block;
     margin: auto;
 }
+
+#refresh {
+    margin-top: 60px;
+}
+
+button {
+    font-size: 13px;
+}
